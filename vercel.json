@@ -1,23 +1,17 @@
 {
-  "rewrites": [
-    {
-      "source": "/wp-content/uploads/(.*)",
-      "destination": "/wp-content/uploads/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
-    }
-  ],
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "wp/**",
-      "maxDuration": 60
-    }
-  },
-  "build": {
-    "env": {
-      "NODEJS_AWS_HANDLER_NAME": "handler"
-    }
-  }
+"rewrites": [
+{ "source": "/(.*)", "destination": "/api/index.js" }
+],
+"functions": {
+"api/index.js": {
+"includeFiles": "wp/**",
+"maxDuration": 60
+}
+},
+"build": {
+"env": {
+"NODEJS_AWS_HANDLER_NAME": "handler"
+}
+}
+}
 }
