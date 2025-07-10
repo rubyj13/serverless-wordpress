@@ -1,10 +1,30 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.js" }
+    {
+      "source": "/wp-content/uploads/(.*)",
+      "destination": "/wp-content/uploads/$1"
+    },
+    {
+      "source": "/wp-content/themes/(.*)",
+      "destination": "/wp-content/themes/$1"
+    },
+    {
+      "source": "/wp-content/plugins/(.*)",
+      "destination": "/wp-content/plugins/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.js"
+    }
   ],
   "functions": {
     "api/index.js": {
-      "includeFiles": "wp/**",
+      "includeFiles": [
+        "wp/**",
+        "wp-content/uploads/**",
+        "wp-content/themes/**",
+        "wp-content/plugins/**"
+      ],
       "maxDuration": 60
     }
   },
@@ -14,4 +34,3 @@
     }
   }
 }
-
