@@ -19,12 +19,7 @@
   ],
   "functions": {
     "api/index.js": {
-      "includeFiles": [
-        "wp/**",
-        "wp-content/uploads/**",
-        "wp-content/themes/**",
-        "wp-content/plugins/**"
-      ],
+      "includeFiles": "wp/**",
       "maxDuration": 60
     }
   },
