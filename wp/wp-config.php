@@ -158,3 +158,4 @@ require_once ABSPATH . 'wp-settings.php';
 
 if (!defined('WP_SITEURL')) {
     define('WP_SITEURL', 'https://picositahub.mywire.org');
+}
